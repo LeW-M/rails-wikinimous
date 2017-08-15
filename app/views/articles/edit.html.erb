@@ -1,0 +1,12 @@
+<h1>Use the form below to edit the article</h1>
+
+<%= form_for @article do |f| %>
+  <%= f.text_field :title, placeholder: "your article title here" %>
+  <%= f.text_field :content, :size => 150, placeholder: "your content here" %>
+  <%= f.submit %>
+<% end %>
+<br>
+
+<%= link_to 'Back to Home', articles_path %>
+<br>
+<%= link_to 'Delete article', article_path(@article), method: :delete %>

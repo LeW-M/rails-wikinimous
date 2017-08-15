@@ -1,0 +1,18 @@
+<h1>All articles listed here</h1>
+
+<ul>
+    <% @articles.each do |article| %>
+      <li>
+        <%= link_to article.title, article_path(article) %>
+        <br>
+         <%= Kramdown::Document.new(article.content).to_html.html_safe %>
+        <br>
+        <%= link_to 'edit', edit_article_path(article) %>
+        <br>
+        <br>
+      </li>
+    <% end %>
+</ul>
+
+<br>
+<%= link_to 'New Article', new_article_path %>

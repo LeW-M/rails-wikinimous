@@ -11,5 +11,6 @@
 // about supported directives.
 //
 //= require rails-ujs
+//= require ace-rails-ap
 //= require turbolinks
 //= require_tree .

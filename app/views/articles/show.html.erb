@@ -1,0 +1,14 @@
+<h1>Your selected article here</h1>
+
+<ul>
+  <li>
+      <%= @article.title %>
+      <br>
+      <%= Kramdown::Document.new(@article.content).to_html.html_safe %>
+      <br>
+  </li>
+</ul>
+
+<%= link_to 'Edit', edit_article_path %>
+<br>
+<%= link_to 'Home', articles_path %>
